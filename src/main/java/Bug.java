@@ -6,13 +6,17 @@ import java.util.UUID;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /*
-  Compile the code:
-  $ javac -cp /u01/oracle/app/oracle/product/12.1.0/dbhome_1/jdbc/lib/ojdbc7.jar Bug.java
 
-  Run the bug:
-  $ java -cp /u01/oracle/app/oracle/product/12.1.0/dbhome_1/jdbc/lib/ojdbc7.jar:. Bug
+Oracle database used: 
+Downloaded from http://www.oracle.com/technetwork/database/enterprise-edition/databaseappdev-vm-161299.html
+Oracle DB Developer VM (7,227,840,000 bytes, md5sum: 6829d0a691010663ddb397c07fcf8150)
 
- */
+Transfer this file to the VM.
+
+Compile and run the code:
+$ javac -cp /u01/oracle/app/oracle/product/12.1.0/dbhome_1/jdbc/lib/ojdbc7.jar Bug.java && java -cp /u01/oracle/app/oracle/product/12.1.0/dbhome_1/jdbc/lib/ojdbc7.jar:. Bug
+
+*/
 public class Bug {
 
     public static void main(String[] args) throws Exception {
