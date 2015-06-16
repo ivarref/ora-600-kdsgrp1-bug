@@ -16,6 +16,12 @@ Do the following inside a terminal in the VM image:
     
     $ (copy/paste the contents of src/main/java/Bug.java into Bug.java)
 
+    or:
+
+    $ wget https://raw.githubusercontent.com/ivarref/ora-600-kdsgrp1-bug/master/src/main/java/Bug.java
+
+    Then compile and run the application to reproduce the bug:
+
     $ javac -cp /u01/oracle/app/oracle/product/12.1.0/dbhome_1/jdbc/lib/ojdbc7.jar Bug.java && java -cp /u01/oracle/app/oracle/product/12.1.0/dbhome_1/jdbc/lib/ojdbc7.jar:. Bug
 
 Number of iterations
