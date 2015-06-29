@@ -1,16 +1,16 @@
-dbms_aq.deque ORA-600 6033 / kdsgrp1 bug
-========================================
+# dbms_aq.deque ORA-600 6033 / kdsgrp1 / kdifxs0: no key bug
 
-Oracle database used
---------------------
+## Current status (2015-06-29)
+This report has led to Oracle filing Bug 21302755, so development is looking at this issue.
+
+## Oracle database used
 
 Downloaded from http://www.oracle.com/technetwork/database/enterprise-edition/databaseappdev-vm-161299.html
 
 Oracle DB Developer VM (7,227,840,000 bytes, md5sum: 6829d0a691010663ddb397c07fcf8150)
 
 
-How to reproduce bug
---------------------
+## How to reproduce bug
 
 Do the following inside a terminal in the VM image:
     
@@ -24,13 +24,11 @@ Do the following inside a terminal in the VM image:
 
     $ javac -cp /u01/oracle/app/oracle/product/12.1.0/dbhome_1/jdbc/lib/ojdbc7.jar Bug.java && java -cp /u01/oracle/app/oracle/product/12.1.0/dbhome_1/jdbc/lib/ojdbc7.jar:. Bug
 
-Number of iterations
---------------------
+## Number of iterations
 
 I usually got the error well before 200 iterations.
 
-Sample output ORA-600 kdsgrp1
------------------------------
+## Sample output ORA-600 kdsgrp1
 
 Sample console output when running Bug.java
 
@@ -64,8 +62,7 @@ Sample console output when running Bug.java
     	at bug.Bug.main(Bug.java:22)
 
 
-Sample output ORA-600 6033
---------------------------
+## Sample output ORA-600 6033
 
     (...)
     >>> 100
