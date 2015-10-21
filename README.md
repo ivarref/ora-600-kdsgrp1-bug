@@ -5,16 +5,14 @@
 ### 2015-06-29
 This report has led to Oracle filing Bug 21302755, so development is looking at this issue.
 
-### 2015-10-20
-There are some indications that there is working being done on this bug,
-but it seems to have stopped at 2015-10-06.
-
+### 2015-10-21
 So this bug has showcased that it is possible to crash the Oracle Database using a single
 connection in a single thread using the most basic AQ features.
 This makes, in my opinion, Oracle AQ quite flawed.
-If Oracle does not fix this bug in the reasonable near future,
-I think it's fair to state that Oracle AQ is in fact dead, and that `FOR UPDATE SKIP LOCKED`
-is to be prefferd for your Oracle-based database queues.
+
+Oracle Support has stated that this bug is being worked on.
+However, I was to choose a Oracle-based database queue today, I would implement my own using
+`FOR UPDATE SKIP LOCKED` and not use Oracle AQ.
 
 ## Oracle database used
 
