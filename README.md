@@ -11,15 +11,17 @@ connection in a single thread using the most basic AQ features.
 This makes, in my opinion, Oracle AQ quite flawed.
 
 Oracle Support has stated that this bug is being worked on.
-However, I was to choose a Oracle-based database queue today, I would implement my own using
+However, if I was to choose a Oracle-based database queue today, I would implement my own using
 `FOR UPDATE SKIP LOCKED` and not use Oracle AQ.
+
+### 2016-02-03
+Bug still exist.
 
 ## Oracle database used
 
 Downloaded from http://www.oracle.com/technetwork/database/enterprise-edition/databaseappdev-vm-161299.html
 
-Oracle DB Developer VM (7,227,840,000 bytes, md5sum: 6829d0a691010663ddb397c07fcf8150)
-
+Oracle DB Developer VM (7,396,868,608 bytes, md5sum: dda3d26031040b2fbff6d4b5e7c67081)
 
 ## How to reproduce bug
 
@@ -33,7 +35,7 @@ Do the following inside a terminal in the VM image:
 
     Then compile and run the application to reproduce the bug:
 
-    $ javac -cp /u01/oracle/app/oracle/product/12.1.0/dbhome_1/jdbc/lib/ojdbc7.jar Bug.java && java -cp /u01/oracle/app/oracle/product/12.1.0/dbhome_1/jdbc/lib/ojdbc7.jar:. Bug
+    $ javac -cp /u01/app/oracle/product/12.1.0.2/db_1/jdbc/lib/ojdbc7.jar Bug.java && java -cp /u01/app/oracle/product/12.1.0.2/db_1/jdbc/lib/ojdbc7.jar:. Bug
 
 ## Number of iterations
 
